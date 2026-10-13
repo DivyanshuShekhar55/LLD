@@ -10,7 +10,7 @@ import (
 // ---------- Models ----------
 
 type MenuItem struct {
-	Code  string
+	Code  string // id
 	Name  string
 	Price int
 }
@@ -18,7 +18,7 @@ type MenuItem struct {
 type Restaurant struct {
 	ID   int
 	Name string
-	Loc  string
+	Loc  string // ideally should be another struct with lat and lon
 	Menu []MenuItem
 }
 
@@ -40,7 +40,7 @@ func (c *Cart) TotalCost() int {
 type User struct {
 	ID      int
 	Name    string
-	Address string
+	Address string // ideally should be another struct with lat and lon
 	Cart    *Cart
 }
 
